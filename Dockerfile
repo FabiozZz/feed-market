@@ -6,7 +6,8 @@ WORKDIR /app/frontend
 
 #ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json ./
+#COPY package.json ./app/frontend
+COPY . /app/frontend
 
 
 
@@ -14,7 +15,7 @@ COPY package.json ./
 
 RUN yarn install
 
-#RUN yarn build
+RUN yarn build
 
 #RUN chown -R node /app/node_modules
 
@@ -22,5 +23,5 @@ EXPOSE 3000
 
 COPY . .
 
-CMD ["yarn", "dev"]
+CMD ["yarn", "start"]
 # docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true front
