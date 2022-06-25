@@ -2,10 +2,18 @@
 import classes from './card_main.module.scss';
 import Image from 'next/image';
 
+/**
+ * @descrition Под экраны mobile
+ * @descrition Карточка товара для страницы: Главная
+ * @param {} props 
+ * @property {('img'|'title'|'animal'|'percentage'|'weight'|'price'|'click')} props
+ * 
+ * @returns {JSX.Element}
+ */
+
 
 const CardMain = (props) => {
     const {img, title, animal, percentage, weight, price, click} = props;
-
 	return (
 		<div className={classes.card}>
             <div className={classes.card__img_wrapper}>

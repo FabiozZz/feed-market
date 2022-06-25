@@ -1,10 +1,18 @@
 import classes from './card_lc.module.scss';
 import Image from 'next/image';
 
+/**
+ * @descrition Под экраны mobile
+ * @descrition Карточка товара для страницы: Личный кабинет продавца
+ * @param {} props 
+ * @property {('img'|'titleLc'|'weight'|'price'|'article'|'barcode'| 'dateCreated'|'stock'|'click')} props
+ * 
+ * @returns {JSX.Element}
+ */
+
+
 const CardLC = (props) => {
-
-    const {img, titleLc , weight, price, article, barcode, dateCreated, stock, click} = props;
-
+    const {img, titleLc, weight, price, article, barcode, dateCreated, stock, click} = props;
     return (
         <div className={classes.list_item}>
             <div className={classes.list_item__title_img_product}>

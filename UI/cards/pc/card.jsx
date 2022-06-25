@@ -1,20 +1,22 @@
 
 import classes from './card.module.scss';
 import Image from 'next/image';
+import React from 'react';
 
 
 
 /**
- * @descrition
- * @param {*} props 
- * @returns 
+ * @descrition Под экраны desktop pc
+ * @descrition Карточка товара для Всех страниц
+ * @param {} props 
+ * @property {('img'|'title'|'animal'|'percentage'|'weight'|'price'|'click')} props
+ * 
+ * @returns {JSX.Element}
  */
 
 
 const Card = (props) => {
-
 const {img, title, animal, percentage, weight, price, click} = props;
-
 	return (
 		<div className={classes.card}>
             <div className={classes.card__img_wrapper}>

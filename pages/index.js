@@ -1,16 +1,5 @@
 import Layout from 'components/common/layouts';
 import Button from 'UI/button';
-import Card from 'UI/cards/pc/card';
-import CardCatalog from 'UI/cards/mobile/card_catalog';
-import CardLC from 'UI/cards/mobile/card_lc';
-import CardMain from 'UI/cards/mobile/card_main';
-import CustomLink from 'UI/custom-link/index'
-import { KeyboardDoubleArrowRightRounded } from '@mui/icons-material';
-
-
-
-
-
 /**
  *
  * @description Главная страница сайта
@@ -18,12 +7,7 @@ import { KeyboardDoubleArrowRightRounded } from '@mui/icons-material';
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Home({cardInfo}) {
-
-	const test = (string) => {
-		alert(string);
-	}
-
+export default function Home() {
 	return (
 		<Layout>
 			{/*<Button factor={'ghost'} size={'xs'}>*/}
@@ -35,18 +19,6 @@ export default function Home({cardInfo}) {
 			{/*<Button factor={'green'} size={'xs'}>*/}
 			{/*	Птицы*/}
 			{/*</Button>*/}
-			<CustomLink href={'#'}>
-				<Card {...cardInfo} click={test}/>
-			</CustomLink>
-			<CustomLink href={'#'}>
-				<CardCatalog {...cardInfo} click={test}/>
-			</CustomLink>
-			<CustomLink href={'#'}>
-				<CardLC {...cardInfo} click={test}/>
-			</CustomLink>
-			<CustomLink href={'#'}>
-				<CardMain {...cardInfo} click={test}/>
-			</CustomLink>
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis
 				consectetur debitis delectus, doloribus eos esse fuga incidunt labore magni
@@ -256,20 +228,4 @@ export default function Home({cardInfo}) {
 			</div>
 		</Layout>
 	);
-}
-export async function getStaticProps(){
-	const cardInfo = {
-		img: '/card/PreMix-Pigs_1.jpg',
-		title: 'Премикс VITOMEK',
-		titleLc: 'Premix для птицы, возможно длинное описание,которое помещается в 2-3 строки...',
-		animal: 'Свиноматки лактирующие (СК-1)',
-		percentage: 'Процент ввода - 10 кг/т',
-		weight: '10 кг',
-		price: '10 500',
-		article:  'PremixBird12',
-		barcode: 'VIT45068149MEK',
-		dateCreated: `${new Date().toLocaleString()}`,
-		stock: 215,
-	}
-	return {props:{cardInfo}};
 }
