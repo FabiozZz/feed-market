@@ -19,7 +19,6 @@ export default function Home() {
 			{/*<Button factor={'green'} size={'xs'}>*/}
 			{/*	Птицы*/}
 			{/*</Button>*/}
-			<Button size={''} factor={''} />
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis
 				consectetur debitis delectus, doloribus eos esse fuga incidunt labore magni
