@@ -1,0 +1,70 @@
+.form_radio {
+  margin: 10px;
+
+  & input[type=radio] {
+    display: none;
+  }
+
+  & .radioButtonView {
+    cursor: pointer;
+    position: relative;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .radioButtonView:before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #DFE6EE 0 0 no-repeat;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+  }
+
+  & .radioButtonView:after {
+    content: "";
+    display: inline-block;
+    width: 100% - 12.5%;
+    height: 100% - 12.5%;
+    margin: 0 auto;
+    position: absolute;
+    background: white 0 0 no-repeat;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+  }
+
+  & input[type=radio]:checked + .radioButtonView:after {
+    width: 8px;
+    height: 8px;
+  }
+
+  & input[type=radio]:checked + .radioButtonView:before {
+    background: #0D9545;
+  }
+
+  & .radioButtonView:hover:before {
+    background: #0D9545;
+  }
+
+  & input[type=radio]:disabled + .radioButtonView:before {
+    background: #DFE6EE 0 0 no-repeat;
+  }
+
+  & input[type=radio]:disabled + .radioButtonView:after {
+    background: #BFC5D2 0 0 no-repeat;
+  }
+}
