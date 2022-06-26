@@ -13,7 +13,7 @@ const RadioButton = ({id, ...other}) => {
     return (
         <div className={classNames(classes.form_radio)}>
             <input id={id} type="radio" {...other}/>
-            <label htmlFor={id} className={classNames(classes.radioButtonView)}></label>
+            <label htmlFor={id} className={classNames(classes.radioButtonView)}/>
         </div>
     );
 }
