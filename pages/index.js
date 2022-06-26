@@ -1,5 +1,5 @@
 import Layout from 'components/common/layouts';
-import Button from 'UI/button';
+import Checkbox from 'UI/checkbox';
 /**
  *
  * @description Главная страница сайта
@@ -19,7 +19,10 @@ export default function Home() {
 			{/*<Button factor={'green'} size={'xs'}>*/}
 			{/*	Птицы*/}
 			{/*</Button>*/}
-			<Button size={''} factor={''} />
+			<Checkbox id={'cb1'} disabled/>
+			<Checkbox id={'cb2'}/>
+			<Checkbox id={'cb3'}/>
+			<Checkbox id={'cb4'} groupChecked={true}/>
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis
 				consectetur debitis delectus, doloribus eos esse fuga incidunt labore magni
