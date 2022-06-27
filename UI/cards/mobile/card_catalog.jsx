@@ -26,7 +26,7 @@ const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
                     <ul className={classes.card__list}>
                         <li className={classes.card__text}>{title}</li>
                         <li className={classes.card__text}>{animal}</li>
-                        <li className={classes.card__text}>Процент ввода -{percentage} кг/т</li>
+                        <li className={classes.card__text}>Процент ввода - {percentage} кг/т</li>
                         <li className={classes.card__text}>{weight} кг</li>
                     </ul>
                 </div>
