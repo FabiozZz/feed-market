@@ -1,5 +1,10 @@
 import {useState} from "react";
 
+/**
+ * @template T
+ * @param {T} initialState
+ * @returns {{onChange: (function():void), clear: (function(): void), state: T}}
+ */
 export function useStateAsObject(initialState){
     const [state,setState] = useState(initialState)
 
