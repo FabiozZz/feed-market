@@ -59,7 +59,7 @@ const Input = (props) => {
 					color: 'green',
 				},
 				'& .MuiOutlinedInput-root': {
-					borderRadius: 4,
+					borderRadius: '12px',
 					background: '#F2FAF5',
 					'& fieldset': {
 						borderColor: '#EEEFF1',
@@ -78,7 +78,7 @@ const Input = (props) => {
 				},
 			}}
 			InputProps={{
-				...(searchIcon || pass && pass?{
+				...((searchIcon || pass) && (pass && pass === true) ? {
 					endAdornment: (
 						<InputAdornment position="end">
 							<IconButton onClick={() => setShowPass(prevState => !prevState)}>
@@ -92,7 +92,7 @@ const Input = (props) => {
 							<SearchIcon />
 						</InputAdornment>
 					),
-				}:null),
+				}: {}),
 			}}
 			{...other}
 		/>
