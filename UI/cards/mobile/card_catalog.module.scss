@@ -41,7 +41,7 @@
         font-weight: 700;
         font-size: 20px;
         display: inline-block;
-        color: #484c52;
+        color: &black2;
         margin: 0px;
     }
     
@@ -53,7 +53,7 @@
     
     &__button {
         display: inline-block;
-        background: #109648;
+        background: $green-btn;
         border-radius: 8px;
         color: #ffffff;
         border: none;

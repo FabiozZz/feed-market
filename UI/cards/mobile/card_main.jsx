@@ -3,17 +3,20 @@ import classes from './card_main.module.scss';
 import Image from 'next/image';
 
 /**
- * @descrition Под экраны mobile
- * @descrition Карточка товара для страницы: Главная
- * @param {} props 
- * @property {('img'|'title'|'animal'|'percentage'|'weight'|'price'|'click')} props
- * 
- * @returns {JSX.Element}
+ * @description Под экраны mobile: Карточка товара для страницы: Каталог
+ *
+ * @param {string} img - путь до картинки
+ * @param {string} title - название продукта
+ * @param {string} animal - категория продукта
+ * @param {number} percentage - Показатель ввода продукта
+ * @param {number} weight - вес продукта
+ * @param {number} price - цена продукта
+ * @param {(function():void)} click - callback функция для покупки
+ * @constructor
  */
 
 
-const CardMain = (props) => {
-    const {img, title, animal, percentage, weight, price, click} = props;
+const CardMain = ({img, title, animal, percentage, weight, price, click}) => {
 	return (
 		<div className={classes.card}>
             <div className={classes.card__img_wrapper}>
@@ -25,15 +28,15 @@ const CardMain = (props) => {
                 <ul className={classes.card__list}>
                     <li className={classes.card__item}>{title}</li>
                     <li className={classes.card__item}>{animal}</li>
-                    <li className={classes.card__item}>{percentage}</li>
+                    <li className={classes.card__item}>Процент ввода -{percentage}</li>
                     <li className={classes.card__item}>{weight}</li>
                 </ul>
             </div>
             <div className={classes.card__footer}>
                 <div className={classes.card__price_inner}>
-                    <div className={classes.card__price}>{price}руб.</div>
+                    <div className={classes.card__price}>{price} руб.</div>
                 </div>
-                <button className={classes.card__button} onClick={() => click('Оно работает))')}><Image src={"/card/Stroke.svg"} width={18} height={18} alt={"logo"}/></button>
+                <button className={classes.card__button} onClick={() => click()}><Image src={"/card/Stroke.svg"} width={18} height={18} alt={"logo"}/></button>
             </div>
         </div>
 	);

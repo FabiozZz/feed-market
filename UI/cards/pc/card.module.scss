@@ -12,7 +12,7 @@
 	box-sizing: border-box;
 
 	&__item {
-		color: #484c52;
+		color: &black2;
 		list-style: none;
 		font-family: 'Roboto';
 		font-style: normal;
@@ -26,7 +26,7 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 20px;
-		color: #484c52;
+		color: &black2;
 		margin: 0px 0 0px 0px;
 	}
 
@@ -36,7 +36,7 @@
 		justify-content: center;
 		height: 44px;
 		width: 52px;
-		background: #109648;
+		background: $green-btn;
 		font-weight: 600;
 		font-size: 20px;
 		border-radius: 8px;
@@ -70,6 +70,6 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 12px;
-		color: #888888;
+		color: $black2;
 	}
 }

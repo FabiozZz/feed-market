@@ -13,6 +13,8 @@ import classes from './card_catalog.module.scss';
  * @param {(function():void)} click - callback функция для покупки
  * @constructor
  */
+
+
 const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
     return (
         <div className={classes.card}>
@@ -26,14 +28,14 @@ const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
                     <ul className={classes.card__list}>
                         <li className={classes.card__text}>{title}</li>
                         <li className={classes.card__text}>{animal}</li>
-                        <li className={classes.card__text}>Процент ввода - {percentage} кг/т</li>
+                        <li className={classes.card__text}>Процент ввода - {percentage}</li>
                         <li className={classes.card__text}>{weight} кг</li>
                     </ul>
                 </div>
             </div>
             <div className={classes.card__bottom}>
                 <p className={classes.card__price}>{price} руб</p>
-                <button className={classes.card__button} onClick={() => click('Оно работает))')}>В корзину</button>
+                <button className={classes.card__button} onClick={() => click()}>В корзину</button>
             </div>
         </div>
     );
