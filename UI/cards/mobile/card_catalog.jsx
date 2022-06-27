@@ -1,18 +1,19 @@
-import classes from './card_catalog.module.scss';
 import Image from 'next/image';
+import classes from './card_catalog.module.scss';
 
 /**
- * @descrition Под экраны mobile
- * @descrition Карточка товара для страницы: Каталог
- * @param {} props 
- * @property {('img'|'title'|'animal'|'percentage'|'weight'|'price'|'click')} props
- * 
- * @returns {JSX.Element}
+ * @description Под экраны mobile: Карточка товара для страницы: Каталог
+ *
+ * @param {string} img - путь до картинки
+ * @param {string} title - название продукта
+ * @param {string} animal - категория продукта
+ * @param {number} percentage - Показатель ввода продукта
+ * @param {number} weight - вес продукта
+ * @param {number} price - цена продукта
+ * @param {(function():void)} click - callback функция для покупки
+ * @constructor
  */
-
-
-export const CardCatalog = (props) => {
-const {img, title, animal, percentage, weight, price, click} = props;
+const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
     return (
         <div className={classes.card}>
             <div className={classes.card__wrapper}>
@@ -25,8 +26,8 @@ const {img, title, animal, percentage, weight, price, click} = props;
                     <ul className={classes.card__list}>
                         <li className={classes.card__text}>{title}</li>
                         <li className={classes.card__text}>{animal}</li>
-                        <li className={classes.card__text}>{percentage}</li> 
-                        <li className={classes.card__text}>{weight}</li>
+                        <li className={classes.card__text}>Процент ввода -{percentage} кг/т</li>
+                        <li className={classes.card__text}>{weight} кг</li>
                     </ul>
                 </div>
             </div>
