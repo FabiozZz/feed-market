@@ -1,7 +1,7 @@
 @import "/styles/variables";
 
 .list_item {
-    background: #FFF;
+    background: #ffffff;
     border-radius: 8px;
     padding: 24px 16px 16px;
     position: relative;
@@ -16,7 +16,7 @@
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        background: #109648;
+        background: $green-btn;
         position: absolute;
         right: 16px;
     }
@@ -36,7 +36,7 @@
     }
 
     & p span {
-        color: #787E87;
+        color: $mute;
         margin-right: 8px;
     }
 
