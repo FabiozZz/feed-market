@@ -1,5 +1,6 @@
 import classes from './radiobutton.module.scss';
 import classNames from 'classnames';
+// import 'materialize-css/dist/css/materialize.min.css';
 
 /**
  * @description Компонент кнопки
@@ -9,11 +10,15 @@ import classNames from 'classnames';
  * @returns {JSX.Element}
  * @constructor
  */
-const RadioButton = ({id, ...other}) => {
+const RadioButton = ({id,children , ...other}) => {
     return (
         <div className={classNames(classes.form_radio)}>
-            <input id={id} type="radio" {...other}/>
-            <label htmlFor={id} className={classNames(classes.radioButtonView)}/>
+            <label>
+                <input type="radio" {...other} />
+                <span className={classNames(classes.radioButtonView)}/>
+                <span className={classes.child}>{children}</span>
+            </label>
+
         </div>
     );
 }
