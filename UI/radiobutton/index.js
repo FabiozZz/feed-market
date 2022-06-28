@@ -6,7 +6,6 @@ import classNames from 'classnames';
  * @description Компонент кнопки
  *
  * @param {React.ButtonHTMLAttributes} props
- * @property {string} id - обязательно для заполнение отвечает за работу радио кнопки
  * @returns {JSX.Element}
  * @constructor
  */
