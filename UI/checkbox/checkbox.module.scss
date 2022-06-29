@@ -1,11 +1,9 @@
 .customCheckbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+  display: none;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
-.a {
+.view {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -13,7 +11,7 @@
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-.a::before {
+.view::before {
   content: '';
   display: inline-block;
   width: 16px;
@@ -29,18 +27,18 @@
 }
 
 /* стили при наведении курсора на checkbox */
-.a:not(.adisabled):hover::before {
+.view:not(:disabled):hover::before {
   border-color: #0D9545;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.achecked::before {
+.view:checked:before {
   background-color: #0D9545;
   background-image: url('/checkbox/checked.svg');
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-.adisabled:before {
+.view:disabled:before {
   background-color: #BFC5D2;
 }
 
@@ -62,6 +60,6 @@
   border-color: #0D9545;
 }
 
-.groupChecked.achecked:before {
+.groupChecked:checked:before {
   background-color: white;
 }
