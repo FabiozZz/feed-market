@@ -1,7 +1,7 @@
 import CustomLink from 'UI/custom-link';
 import classNames from 'classnames';
 import Image from 'next/image';
-import Input from 'UI/Input/input';
+import Input from 'UI/input/';
 
 /**
  * @description Компонент навигации по сайту, содержит несуществующую страницу которая выводит на дефолтную 404 страницу,
@@ -38,7 +38,7 @@ const NavBar = ({ show }) => {
 					</CustomLink>
 				</div>
 
-				<Input searchIcon={true} />
+				<Input searchIcon={true} label={'Поиск'} />
 
 				<div className="nav-wrapper__other">
 					<div className="btn">
