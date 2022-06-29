@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import classes from './card_catalog.module.scss';
+import CustomLink from 'UI/custom-link';
 
 /**
  * @description Под экраны mobile: Карточка товара для страницы: Каталог
  *
+ * @param {reference} reference - путь до страницы описание товара
  * @param {string} img - путь до картинки
  * @param {string} title - название продукта
  * @param {string} animal - категория продукта
@@ -15,13 +17,13 @@ import classes from './card_catalog.module.scss';
  */
 
 
-const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
+const CardCatalog = ({reference, img,title,animal,percentage,weight,price,click})=> {
     return (
-        <div className={classes.card}>
+    <CustomLink className={classes.card} href={reference}>
             <div className={classes.card__wrapper}>
                 <div className={classes.card__img_wrapper}>
                     <div className={classes.card__img}>
-                        <Image src={img} height={132} width={93} alt={'image'}/>
+                        <Image src={img} height={132} width={93} alt='image'/>
                     </div>
                 </div>
                 <div>
@@ -37,7 +39,7 @@ const CardCatalog = ({img,title,animal,percentage,weight,price,click})=> {
                 <p className={classes.card__price}>{price} руб</p>
                 <button className={classes.card__button} onClick={() => click()}>В корзину</button>
             </div>
-        </div>
+    </CustomLink>
     );
 };
 

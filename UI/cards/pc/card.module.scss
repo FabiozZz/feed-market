@@ -3,31 +3,28 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	background: #ffffff;
 	border-radius: 16px;
-	max-width: 348px;
-	max-height: 468px;
+	width: 348px;
+	height: 468px;
 	padding: 20px 24px 24px 24px;
 	box-sizing: border-box;
 
 	&__item {
-		color: &black2;
+		color: $black2;
 		list-style: none;
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 16px;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
+		@extend %text;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
-
+	
+	
 	&__price {
-		font-family: 'Gilroy';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 20px;
-		color: &black2;
-		margin: 0px 0 0px 0px;
+		@extend %h3;
+		color: $black2;
 	}
 
 	&__button {
@@ -50,6 +47,7 @@
 
 	&__list {
 		padding: 0;
+		margin: 0;
 	}
 
 	&__img_wrapper {
@@ -66,10 +64,7 @@
 	}
 
 	&__weight {
-		font-family: 'Gilroy';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 12px;
-		color: $black2;
+		@extend %caption;
+		color: $mute;
 	}
 }

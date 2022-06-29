@@ -1,13 +1,13 @@
-
 import classes from './card.module.scss';
 import Image from 'next/image';
-import React from 'react';
+import CustomLink from 'UI/custom-link';
 
 
 
 /**
  * @description Под экраны desktop: Карточка товара под все страницы
  *
+ * @param {reference} reference - путь до страницы описание товара
  * @param {string} img - путь до картинки
  * @param {string} title - название продукта
  * @param {string} animal - категория продукта
@@ -19,12 +19,12 @@ import React from 'react';
  */
 
 
-const Card = ({img, title, animal, percentage, weight, price, click}) => {
+const Card = ({reference, img, title, animal, percentage, weight, price, click}) => {
 	return (
-		<div className={classes.card}>
+        <CustomLink className={classes.card} href={reference}>
             <div className={classes.card__img_wrapper}>
                 <div className={classes.card__img}>
-                    <Image src={img} width={170} height={241}alt={"image"}/>
+                    <Image src={img} width={170} height={241} alt={"image"}/>
                 </div>
             </div>
             <div className={classes.card__wrapper}>
@@ -36,12 +36,12 @@ const Card = ({img, title, animal, percentage, weight, price, click}) => {
             </div>
             <div className={classes.card__footer}>
                 <div className={classes.card__price_inner}>
-                    <div className={classes.card__weight}>{weight}</div>
-                    <div className={classes.card__price}>{price} руб</div>
+                    <div className={classes.card__weight}>{weight} кг</div>
+                    <div className={classes.card__price}>{price} руб.</div>
                 </div>
                 <button className={classes.card__button} onClick={() => click()}><Image src={"/card/Stroke.svg"} width={18} height={18} alt={"logo"}/></button>
             </div>
-        </div>
+        </CustomLink>
 	);
 };
 

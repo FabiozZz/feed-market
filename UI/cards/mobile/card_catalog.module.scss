@@ -1,9 +1,10 @@
 @import "/styles/variables";
 
 .card {
+    display: block;
     max-width: 320px;
     max-height: 228px;
-    padding: 16px 16px 20px 16px;
+    padding: 16px 16px 21px 16px;
     border-radius: 0;
     background-color: #fff;
 
@@ -15,33 +16,28 @@
     
     &__list{
         margin: 0;
-        padding: 0 0 30px 0;
+        padding: 0 0 30px 15px;
     }
     
     &__text {
-        font-weight: 400;
-        font-size: 12px;
+        @extend %text_mobile;
+        color: $black2;
         list-style: none;
-        line-height: 20px;
-
-            &:last-child{
-                margin-top: 8px;
-            }
+        margin-bottom: 5px;
+        &:last-child{
+            margin: 10px 0 4px 0;
+        }
     }
-    
     
     &__img_wrapper {
         display: flex;
         width: 100px;
-        margin-right: 15px;
     }
     
     &__price {
-        font-family: 'Gilroy';
-        font-weight: 700;
-        font-size: 20px;
+        @extend %h3;
         display: inline-block;
-        color: &black2;
+        color: $black2;
         margin: 0px;
     }
     
@@ -52,6 +48,7 @@
     }
     
     &__button {
+        @extend %small_text_bold;
         display: inline-block;
         background: $green-btn;
         border-radius: 8px;
@@ -61,10 +58,8 @@
         height: 48px;
         width: 105px;
         text-align: left;
-        font-weight: 700;
-        font-size: 12px;
         padding: 0px 10px;
-
+        cursor: pointer;
             &::after {
                 content: url("/card/Stroke.svg");
                 position: absolute;
@@ -78,7 +73,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-        margin-bottom: 12px;
+        margin-bottom: 11px;
     }
   
 }  
