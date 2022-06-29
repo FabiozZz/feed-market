@@ -1,0 +1,10 @@
+@import "/styles/variables";
+
+.ad__horizontal {
+    max-width: 1464px;
+    max-height: 328px;
+    @extend %ad;
+    &__img{
+        object-fit: cover;
+    }
+}

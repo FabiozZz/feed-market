@@ -103,6 +103,11 @@
   color: #414141;
 }
 
+%ad {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+}
 /* colors */
 
 $base-green: rgba(13, 149, 69, 0.8);

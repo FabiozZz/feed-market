@@ -12,14 +12,13 @@
 	box-sizing: border-box;
 
 	&__item {
-		color: &black2;
+		color: $black2;
 		list-style: none;
-		font-family: 'Roboto';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 12px;
-		margin-bottom: 6px;
-		letter-spacing: 1px;
+		margin-bottom: 5px;
+		@extend %text_mobile;
+		&:last-child {
+			margin: 10px 0px 0 0;
+		}
 	}
 
 	&__price {
@@ -27,7 +26,7 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 20px;
-		color: &black2;
+		color: $black2;
 		margin: 0px 0 0px 0px;
 	}
 
@@ -38,15 +37,12 @@
 		height: 40px;
 		width: 36px;
 		background: $green-btn;
-		font-weight: 600;
-		font-size: 20px;
 		border-radius: 8px;
-		color: #ffffff;
 		border: none;
 		padding: 0;
 	}
 	&__wrapper {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	&__list {
@@ -59,7 +55,6 @@
 		max-width: 100%;
 		display: flex;
 		justify-content: center;
-		margin-bottom: 13px;
 	}
 
 	&__footer {
