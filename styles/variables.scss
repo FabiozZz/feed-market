@@ -110,9 +110,27 @@
 }
 /* colors */
 
-$base-green: rgba(13, 149, 69, 0.8);
-$base-yellow:#E4B200;
+$base-green: #0D9545;
+$base-green-80%: rgba(16, 150, 72, 0.3);
+
+$base-yellow:#F3DB00;
+$base-yellow-80%:rgba(243, 219, 0, 0.8);
+
+$body-color:#EDEEF3;
+
 $box-shadow:0px 4px 12px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+
+$white:#FFFFFF;
+
+$text:#414141;
+$disable-text:#7E7E7E;
+$disable-background:#B0B0B0;
+$chips-background:#C8C8C8;
+$input-text:#999999;
+$input:#F2FAF5;
+$slide-background:linear-gradient(360deg, rgba(0, 0, 0, 0.7) 2.02%, rgba(0, 0, 0, 0) 61.73%);
+$landing-page-card-background:#DFE6EE;
 
 $black:#414141;
 $black2: #484C52;
