@@ -1,0 +1,10 @@
+@import "/styles/variables";
+
+.ad__vertical {
+    max-width: 346px;
+    min-height: 960px;
+    @extend %ad;
+    &__img{
+        object-fit: cover;
+    }
+}
