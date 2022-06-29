@@ -27,18 +27,18 @@
 }
 
 /* стили при наведении курсора на checkbox */
-.view:not(:disabled):hover::before {
+.customCheckbox:not(:disabled):hover+.view:before {
   border-color: #0D9545;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.view:checked:before {
+.customCheckbox:checked .view:before {
   background-color: #0D9545;
   background-image: url('/checkbox/checked.svg');
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-.view:disabled:before {
+.customCheckbox:disabled .view:before {
   background-color: #BFC5D2;
 }
 

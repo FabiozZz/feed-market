@@ -37,8 +37,7 @@ const Checkbox = ({groupChecked, children, ...other}) => {
     return (
         <div>
             <label>
-                <input type="checkbox" className={classNames(classes.customCheckbox)}
-                       {...other}/>
+                <input type="checkbox" {...other} className={classNames(classes.customCheckbox)}/>
                 <span className={classes.view}/>
                 <span>{children}</span>
             </label>
