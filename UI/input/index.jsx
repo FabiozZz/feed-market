@@ -49,16 +49,17 @@ const Input = (props) => {
 
 	return (
 		<TextField
-			id="standard-basic"
 			type={pass && !showPass ? 'password' : 'text'}
+			variant="filled"
 			value={localState}
 			onChange={onChange}
 			size={'small'}
 			sx={{
 				'& label.Mui-focused': {
-					color: 'green',
+					color: '#C8C8C8',
 				},
-				'& .MuiOutlinedInput-root': {
+				'& .MuiFilledInput-root': {
+
 					borderRadius: '12px',
 					background: '#F2FAF5',
 					'& fieldset': {
@@ -67,14 +68,22 @@ const Input = (props) => {
 					'&:hover': {
 						backgroundColor: '#FFFFFF',
 						borderColor: '#EEEFF1',
+						border: '1px solid #C8C8C8',
 					},
 					'&.Mui-focused fieldset': {
 						backgroundColor: 'transparent',
-						borderColor: '#F3DB00',
+						border: '1px solid #C8C8C8',
 					},
 					'&.Mui-focused': {
 						backgroundColor: '#FFFFFF',
+						border: '1px solid #C8C8C8',
 					},
+					'&:after':{
+						display:'none'
+					},
+					'&:before':{
+						display:'none'
+					}
 				},
 			}}
 			InputProps={{
