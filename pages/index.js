@@ -1,4 +1,5 @@
 import Layout from 'components/common/layouts';
+
 /**
  *
  * @description Главная страница сайта
@@ -9,60 +10,39 @@ import Layout from 'components/common/layouts';
 export default function Home() {
 	return (
 		<Layout>
-			{/*<Button factor={'ghost'} size={'xs'}>*/}
-			{/*	Птицы*/}
-			{/*</Button>*/}
-			{/*<Button factor={'yellow'} size={'xs'}>*/}
-			{/*	Птицы*/}
-			{/*</Button>*/}
-			{/*<Button factor={'green'} size={'xs'}>*/}
-			{/*	Птицы*/}
-			{/*</Button>*/}
-			<div>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis
-				consectetur debitis delectus, doloribus eos esse fuga incidunt labore magni
-				mollitia officiis quas, repellat, reprehenderit ullam! Itaque modi mollitia saepe?
-			</div>
-			<div>
-				At aut impedit maxime possimus, sapiente unde velit? Ab accusantium deserunt dolor
-				est id ipsam labore laborum laudantium molestiae neque non omnis porro praesentium
-				quia sit, totam, ut velit voluptatum.
-			</div>
-			<div>
-				A accusamus ad autem commodi dolor, dolore dolores eum id itaque magnam molestiae
-				molestias numquam omnis perspiciatis quae quia reiciendis, saepe unde voluptas
-				voluptates. A atque consectetur eum ipsam nulla.
-			</div>
-			<div>
-				A aliquam aliquid, architecto aut blanditiis dicta dignissimos dolorem esse
-				expedita incidunt necessitatibus nesciunt officia optio quae veritatis. Aperiam
-				culpa deserunt enim esse fuga, molestiae nisi non odit ratione temporibus!
-			</div>
-			<div>
-				Accusamus consequuntur dolore hic, iure odit placeat soluta totam? A accusamus
-				adipisci animi autem, beatae dolor eius eveniet harum illo, nemo numquam obcaecati
-				officia perferendis quod ratione sed veniam voluptatum.
-			</div>
-			<div>
-				Error, officiis praesentium reprehenderit sequi sunt veritatis. Illo praesentium
-				quas qui. Accusantium alias consequuntur dignissimos, dolorem eaque exercitationem
-				neque nulla optio quia quibusdam, quis rerum tempore temporibus ullam unde.
-				Consequatur.
-			</div>
-			<div>
-				Aperiam excepturi libero neque pariatur. Aspernatur facilis itaque libero, porro
-				quibusdam recusandae. Cum distinctio eligendi, eveniet illo nihil pariatur quidem
-				unde veritatis? Aliquam earum minus nemo officiis recusandae reiciendis totam.
-			</div>
-			<div>
-				Accusantium, amet aperiam eaque, excepturi ipsa minima, nihil odit praesentium
-				quia quisquam rerum sit unde. Alias aperiam corporis dolorum eos exercitationem
-				fugit magnam modi quia quos, repellat rerum vel voluptatum.
-			</div>
-			<div>
-				Aliquid aut dicta dolorem eius enim facilis in, nam, neque nisi nulla quibusdam
-				quod repellat repellendus rerum saepe similique suscipit totam ullam! Alias
-				debitis, dolores error itaque mollitia quas soluta?
+			<div className='home'>
+				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur earum error et fugit
+					incidunt itaque maiores minus neque nihil perspiciatis placeat quisquam repellat saepe soluta
+					suscipit, tempore unde, veritatis!
+				</div>
+				<div>Assumenda beatae dignissimos dolor dolore ipsa magni omnis sint totam. Amet aperiam ea fugit labore
+					quaerat rerum, sed! Dolores eligendi fugiat, harum laboriosam omnis quia sapiente similique suscipit
+					vitae voluptatibus!
+				</div>
+				<div>Blanditiis dolorum repellat voluptate? Aliquam, maxime, pariatur. Ab accusantium atque blanditiis
+					debitis error fugit in mollitia quam. Ab aut debitis eos, laboriosam modi nisi officia optio quos
+					tenetur vel vitae?
+				</div>
+				<div>Ex laboriosam mollitia quo tempore veritatis! Adipisci animi illum labore mollitia neque possimus
+					provident vero. Aut ea illo, modi numquam odit quibusdam suscipit! Esse, ipsa maxime mollitia
+					quisquam sit voluptatum!
+				</div>
+				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
+					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
+					necessitatibus numquam optio qui voluptates voluptatibus.
+				</div>
+				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
+					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
+					necessitatibus numquam optio qui voluptates voluptatibus.
+				</div>
+				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
+					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
+					necessitatibus numquam optio qui voluptates voluptatibus.
+				</div>
+				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
+					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
+					necessitatibus numquam optio qui voluptates voluptatibus.
+				</div>
 			</div>
 			<div>
 				Esse exercitationem iusto necessitatibus nisi tenetur. Exercitationem molestiae
