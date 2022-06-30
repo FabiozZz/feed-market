@@ -103,6 +103,11 @@
   color: #414141;
 }
 
+%ad {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+}
 /* colors */
 
 $base-green: rgba(13, 149, 69, 0.8);
@@ -115,8 +120,15 @@ $RadioAndCheckboxLightGrey: #DFE6EE;
 $RadioAndCheckboxWhite: white;
 
 $black:#414141;
+$black2: #484C52;
+$green-btn:#0D9545;
 $green_link:#005624;
 $mute:#787E87;
+
+$RadioAndCheckboxGreen: #0D9545;
+$RadioAndCheckboxGrey: #BFC5D2;
+$RadioAndCheckboxLightGrey: #DFE6EE;
+$RadioAndCheckboxWhite: white;
 
 /* effects */
 
