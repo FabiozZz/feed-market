@@ -1,9 +1,8 @@
 import classes from './radiobutton.module.scss';
 import classNames from 'classnames';
-// import 'materialize-css/dist/css/materialize.min.css';
 
 /**
- * @description Компонент кнопки
+ * @description Компонент RadioButton
  *
  * @param {React.ButtonHTMLAttributes} props
  * @returns {JSX.Element}
