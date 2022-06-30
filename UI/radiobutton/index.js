@@ -8,7 +8,7 @@ import classNames from 'classnames';
  * @returns {JSX.Element}
  * @constructor
  */
-const RadioButton = ({ id, children, ...other }) => {
+const RadioButton = ({children, ...other }) => {
 	return (
 		<div className={classNames(classes.form_radio)}>
 			<label>
