@@ -1,5 +1,6 @@
 import classes from './radiobutton.module.scss';
 import classNames from 'classnames';
+import {useState} from "react";
 
 /**
  * @description Компонент RadioButton
@@ -8,11 +9,12 @@ import classNames from 'classnames';
  * @returns {JSX.Element}
  * @constructor
  */
-const RadioButton = ({children, ...other }) => {
+const RadioButton = ({children, checked, ...other }) => {
+
 	return (
 		<div className={classNames(classes.form_radio)}>
 			<label>
-				<input type="radio" {...other} />
+				<input type="radio" defaultChecked={checked}  {...other} />
 				<span className={classNames(classes.radioButtonView)} />
 				<span className={classes.child}>{children}</span>
 			</label>
