@@ -1,31 +1,7 @@
 import NavBar from 'components/common/layouts/nav-bar';
-import React, { useEffect, useState } from 'react';
-import Slide from "@mui/material/Slide";
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import {AppBar} from "@mui/material";
-
-/**
- *
- * @param props
- * @returns {JSX.Element}
- * @constructor
- */
-const  HideOnScroll = ({children})=> {
-
-	const [scrollTarget,setScrollTarget] = useState(undefined)
-
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			setScrollTarget(document.getElementById('__next'))
-		}
-	},[]);
-	const trigger = useScrollTrigger({target:scrollTarget});
-	return (
-		<Slide appear={false} direction="down" in={!trigger}>
-			{children}
-		</Slide>
-	);
-}
+import Footer from 'components/common/layouts/footer';
+import { useEffect, useRef, useState } from 'react';
+import { func } from 'prop-types';
 
 /**
  * @description Корневой Layout, содержит основную разметку страницы, одинаковую для нескольких страниц
@@ -48,25 +24,20 @@ const  HideOnScroll = ({children})=> {
  * @constructor
  */
 const Layout = ({ children }) => {
+	const [navbar, setNavbar] = useState(true);
 
-	/**
-	 * @type {React.MutableRefObject<HTMLDivElement | null>}
-	 */
+	function scroll(e) {
+		if (e.deltaY < 1) {
+			setNavbar(true);
+		} else if (e.deltaY > 1) {
+			setNavbar(false);
+		}
+	}
 
 	return (
-		<div className={'app'}>
-			<HideOnScroll>
-				<AppBar color={'transparent'} sx={{
-					'&':{
-						boxShadow:'none'
-					}
-				}}>
-					{/*<Toolbar>*/}
-					  <NavBar />
-					{/*</Toolbar>*/}
-				</AppBar>
-			</HideOnScroll>
-			<main  className='app__content'>{children}</main>
+		<div onWheel={scroll} className={'app'}>
+			<NavBar show={navbar} />
+			<main className='app__content'>{children}</main>
 		</div>
 	);
 };
