@@ -1,4 +1,6 @@
 import Layout from 'components/common/layouts';
+import GroupCheckbox from "../UI/GroupCheckbox";
+import Checkbox from "../UI/checkbox";
 
 /**
  *
@@ -10,6 +12,21 @@ import Layout from 'components/common/layouts';
 export default function Home() {
 	return (
 		<Layout>
+
+			<GroupCheckbox>
+				<Checkbox checked>
+					12
+				</Checkbox>
+				<Checkbox>
+					13
+				</Checkbox>
+				<Checkbox>
+					14
+				</Checkbox>
+
+				12
+			</GroupCheckbox>
+
 			<div className='home'>
 				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur earum error et fugit
 					incidunt itaque maiores minus neque nihil perspiciatis placeat quisquam repellat saepe soluta
