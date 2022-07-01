@@ -1,6 +1,4 @@
 import Layout from 'components/common/layouts';
-import GroupCheckbox from "../UI/GroupCheckbox";
-import Checkbox from "../UI/checkbox";
 
 /**
  *
@@ -12,53 +10,50 @@ import Checkbox from "../UI/checkbox";
 export default function Home() {
 	return (
 		<Layout>
-
-			<GroupCheckbox>
-				<Checkbox checked>
-					12
-				</Checkbox>
-				<Checkbox>
-					13
-				</Checkbox>
-				<Checkbox>
-					14
-				</Checkbox>
-
-				12
-			</GroupCheckbox>
-
-			<div className='home'>
-				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur earum error et fugit
-					incidunt itaque maiores minus neque nihil perspiciatis placeat quisquam repellat saepe soluta
-					suscipit, tempore unde, veritatis!
+			<div className="home">
+				<div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur
+					earum error et fugit incidunt itaque maiores minus neque nihil perspiciatis
+					placeat quisquam repellat saepe soluta suscipit, tempore unde, veritatis!
 				</div>
-				<div>Assumenda beatae dignissimos dolor dolore ipsa magni omnis sint totam. Amet aperiam ea fugit labore
-					quaerat rerum, sed! Dolores eligendi fugiat, harum laboriosam omnis quia sapiente similique suscipit
-					vitae voluptatibus!
+				<div>
+					Assumenda beatae dignissimos dolor dolore ipsa magni omnis sint totam. Amet
+					aperiam ea fugit labore quaerat rerum, sed! Dolores eligendi fugiat, harum
+					laboriosam omnis quia sapiente similique suscipit vitae voluptatibus!
 				</div>
-				<div>Blanditiis dolorum repellat voluptate? Aliquam, maxime, pariatur. Ab accusantium atque blanditiis
-					debitis error fugit in mollitia quam. Ab aut debitis eos, laboriosam modi nisi officia optio quos
-					tenetur vel vitae?
+				<div>
+					Blanditiis dolorum repellat voluptate? Aliquam, maxime, pariatur. Ab accusantium
+					atque blanditiis debitis error fugit in mollitia quam. Ab aut debitis eos,
+					laboriosam modi nisi officia optio quos tenetur vel vitae?
 				</div>
-				<div>Ex laboriosam mollitia quo tempore veritatis! Adipisci animi illum labore mollitia neque possimus
-					provident vero. Aut ea illo, modi numquam odit quibusdam suscipit! Esse, ipsa maxime mollitia
-					quisquam sit voluptatum!
+				<div>
+					Ex laboriosam mollitia quo tempore veritatis! Adipisci animi illum labore
+					mollitia neque possimus provident vero. Aut ea illo, modi numquam odit quibusdam
+					suscipit! Esse, ipsa maxime mollitia quisquam sit voluptatum!
 				</div>
-				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
-					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
-					necessitatibus numquam optio qui voluptates voluptatibus.
+				<div>
+					Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam,
+					necessitatibus non pariatur perspiciatis possimus ut veniam? Aliquam assumenda
+					cumque, enim esse excepturi necessitatibus numquam optio qui voluptates
+					voluptatibus.
 				</div>
-				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
-					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
-					necessitatibus numquam optio qui voluptates voluptatibus.
+				<div>
+					Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam,
+					necessitatibus non pariatur perspiciatis possimus ut veniam? Aliquam assumenda
+					cumque, enim esse excepturi necessitatibus numquam optio qui voluptates
+					voluptatibus.
 				</div>
-				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
-					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
-					necessitatibus numquam optio qui voluptates voluptatibus.
+				<div>
+					Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam,
+					necessitatibus non pariatur perspiciatis possimus ut veniam? Aliquam assumenda
+					cumque, enim esse excepturi necessitatibus numquam optio qui voluptates
+					voluptatibus.
 				</div>
-				<div>Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam, necessitatibus non
-					pariatur perspiciatis possimus ut veniam? Aliquam assumenda cumque, enim esse excepturi
-					necessitatibus numquam optio qui voluptates voluptatibus.
+				<div>
+					Ab assumenda atque, consectetur consequatur corporis enim illo in iusto nam,
+					necessitatibus non pariatur perspiciatis possimus ut veniam? Aliquam assumenda
+					cumque, enim esse excepturi necessitatibus numquam optio qui voluptates
+					voluptatibus.
 				</div>
 			</div>
 			<div>
