@@ -9,19 +9,19 @@
     }
 
     &medium {
-        max-width: 1092px;
+        min-width: 1092px;
         min-height: 328px;
         @extend %ad;
     }
 
     &small {
-        max-width: 1092px;
+        min-width: 1092px;
         min-height: 272px;
         @extend %ad;
     }
 
     &vertical {
-        max-width: 346px;
+        min-width: 346px;
         min-height: 960px;
         @extend %ad;
     }
