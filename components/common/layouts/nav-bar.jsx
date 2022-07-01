@@ -38,7 +38,7 @@ const NavBar = ({ show }) => {
 					</CustomLink>
 				</div>
 
-				<Input searchIcon={true} />
+				<Input searchIcon={true} label={'поиск'} />
 
 				<div className="nav-wrapper__other">
 					<div className="btn">
