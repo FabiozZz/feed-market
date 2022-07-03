@@ -13,8 +13,7 @@
     }
     
     &__btn{
-        @extend %btn_base;
-        @extend %text_bold;
+        @extend %h3;
         background-color: $base-yellow;
         cursor: pointer;
     }

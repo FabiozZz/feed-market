@@ -13,10 +13,9 @@ import CustomLink from 'UI/custom-link';
  * @param {number} weight - вес продукта
  * @param {number} price - цена продукта
  * @param {(function():void)} click - callback функция для покупки
+ * @returns {JSX.Element}
  * @constructor
  */
-
-
 const CardMain = ({reference, img, title, animal, percentage, weight, price, click}) => {
 	return (
         <CustomLink className={classes.card} href={reference}>
@@ -37,7 +36,7 @@ const CardMain = ({reference, img, title, animal, percentage, weight, price, cli
                 <div className={classes.card__price_inner}>
                     <div className={classes.card__price}>{price} руб.</div>
                 </div>
-                <button className={classes.card__button} onClick={() => click()}><Image src={"/card/Stroke.svg"} width={18} height={18} alt={"logo"}/></button>
+                <button className={classes.card__button} onClick={click}><Image src={"/card/Stroke.svg"} width={18} height={18} alt={"logo"}/></button>
             </div>
         </CustomLink>
 	);

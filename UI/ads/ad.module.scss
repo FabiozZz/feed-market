@@ -22,7 +22,7 @@
 
     &vertical {
         min-width: 346px;
-        min-height: 960px;
+        max-height: 960px;
         @extend %ad;
     }
    

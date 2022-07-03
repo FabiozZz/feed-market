@@ -16,10 +16,9 @@ import CustomLink from 'UI/custom-link';
  * @param {number} price - цена продукта
  * @param {number} weight - вес продукта
  * @param {(function():void)} click - callback функция для покупки
+ * @returns {JSX.Element}
  * @constructor
  */
-
-
 const CardLC = ({reference, img, titleLc, article, barcode, dateCreated, stock, price, weight, click}) => {
     return (
         <CustomLink className={classes.list_item} href={reference}>
@@ -33,7 +32,7 @@ const CardLC = ({reference, img, titleLc, article, barcode, dateCreated, stock, 
                 <p className={classes.list_item__descr}><span className={classes.list_item__key}>На складе: </span>{stock}</p>
                 <p className={classes.list_item__descr}><span className={classes.list_item__key}>Цена, руб: </span>{price}</p>
                 <p className={classes.list_item__descr}><span className={classes.list_item__key}>Вес, кг: </span>{weight}</p>
-                <div className={classes.list_item__title_img} onClick={() => click()}>
+                <div className={classes.list_item__title_img} onClick={click}>
                 <Image src={'/card/Settings-burger.svg'} width={29} height={21} alt={'button'}/>
                 </div>
         </CustomLink>

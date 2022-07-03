@@ -4,77 +4,46 @@ import CardLC from "UI/cards/mobile/card_lc"
 import CardMain from "UI/cards/mobile/card_main"
 import Ad from "UI/ads/ad"
 import Layout from "components/common/layouts"
-import Recomend from "UI/recomend/recomend"
-import CardGrid from "UI/cards_grid/cards_grid"
+import Recomend from "/components/recomend/recomend"
+import CardGrid from "/components/cards_grid/cards_grid"
 
 
 
-const Test = () => {
-
-    const test = {
-        img: '/card/PreMix-Pigs_1.jpg',
-        imgAd: '/ad.jpg',
-        title: 'Премикс VITOMEK',
-        animal: 'Свиноматки лактирующие (СК-1) ',
-        percentage: '10 кг/т',
-        weight: '10',
-        price: '10 000',
-        click:  function test(e) {
-            stopPropagation(e);
-            alert('test');
-        },
-        titleLc: 'Premix для птицы, возможно ...',
-        article: 'PremixBird12',
-        barcode: 'VIT45068149MEK',
-        dateCreated: '22.05.2022  19:16',
-        stock: 218,
-        reference: 'https://translate.google.com/?hl=ru&tab=TT',
-        large: 'large',
-        medium: 'medium',
-        small: 'small',
-        vertical: 'vertical',
-    }
-
+const Test = ({cards}) => {
+    
     return ( 
         <Layout>
             <div className='home'>
-                <Ad img={test.imgAd} reference={test.reference} type={test.large}/>
+                <Ad img={cards[0].imgAd} reference={cards[0].reference} type={cards[0].large}/>
                 <div className="card__top">
                     <Recomend/>
-                    <CardGrid type='row'/>
+                    <CardGrid type='row' cards={cards}/>
                 </div>
 
                 <div className="card__middle">
                         <Recomend/>
                     <div className="card__block__wrapper">
-                        <Ad img={test.imgAd} reference={test.reference} type={test.vertical}/>
-                        <CardGrid type='block'/>
+                    <Ad img={cards[0].imgAd} reference={cards[0].reference} type={cards[0].vertical}/>
+                        <CardGrid type='block' cards={cards}/>
                     </div>
                 </div>
 
                 <div className="card__bottom">
                     <Recomend/>
-                    <Ad img={test.imgAd} reference={test.reference} type={test.large}/>
-                    <CardGrid type='row'/>
+                    <Ad img={cards[0].imgAd} reference={cards[0].reference} type={cards[0].large}/>
+                    <CardGrid type='row' cards={cards}/>
                 </div>
-
-
-                
-            
-                {/* <Card reference={test.reference} img={test.img} title={test.title} animal={test.animal}
-                percentage={test.percentage} weight={test.weight} price={test.price}/>
-                <CardCatalog reference={test.reference} img={test.img} title={test.title} animal={test.animal}
-                percentage={test.percentage} weight={test.weight} price={test.price} click={test.click}/>
-                <CardLC reference={test.reference} img={test.img} title={test.title} animal={test.animal}
-                percentage={test.percentage} weight={test.weight} price={test.price} titleLc={test.titleLc} stock={test.stock} article={test.article} barcode={test.barcode} dateCreated={test.dateCreated}/>
-                <CardMain reference={test.reference} img={test.img}  title={test.title} animal={test.animal}
-                percentage={test.percentage} weight={test.weight} price={test.price} />
-                <Ad img={test.imgAd} reference={test.reference} type={test.small}/>
-                <Ad img={test.imgAd} reference={test.reference} type={test.medium}/>
-                <Ad img={test.imgAd} reference={test.reference} type={test.vertical}/> */}
             </div>
         </Layout>
     )
 }
-
+export async function getStaticProps() {
+    const res = await fetch('http://localhost:5000/cards')
+    const cards = await res.json()
+    return{
+        props: {
+            cards,
+        },
+    }
+}
 export default Test;

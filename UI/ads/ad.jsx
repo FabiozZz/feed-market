@@ -6,9 +6,9 @@ import Image from 'next/image';
  * @param {string} img - путь до картинки
  * @param {string} reference - ссылка на рекламный сайт
  * @param {('small'|'medium'|'large'|'vertical')} type - размер и тип рекламного блока
+ * @returns {JSX.Element}
  * @constructor
  */
-
  const Ad = ({img, reference, type} = {}) => {
     const typeAd = 'ad__' +  type;
 
