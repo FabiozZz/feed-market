@@ -12,11 +12,10 @@ import {useState} from "react";
  */
 
 const Checkbox = ({groupChecked, children, checked, ...other}) => {
-
     return (
         <div>
             <label className={classes.wrapper}>
-                <input type="checkbox" defaultChecked={checked} {...other} className={classNames(classes.customCheckbox)}/>
+                <input type="checkbox" {...other} className={classNames(classes.customCheckbox)} defaultChecked={checked}/>
                 <span className={classNames(classes.view, !groupChecked || classes.groupChecked)}/>
                 <span className={classes.child}>{children}</span>
             </label>
