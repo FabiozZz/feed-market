@@ -1,16 +1,13 @@
-import Card from "UI/cards/pc/card"
-import CardCatalog from "UI/cards/mobile/card_catalog"
-import CardLC from "UI/cards/mobile/card_lc" 
-import CardMain from "UI/cards/mobile/card_main"
+import cards from '/mock/cards.json';
 import Ad from "UI/ads/ad"
 import Layout from "components/common/layouts"
-import Recomend from "/components/recomend/recomend"
-import CardGrid from "/components/cards_grid/cards_grid"
+import Recomend from './home/recomend/recomend';
+import CardGrid from 'components/common/cards_grid/cards_grid';
 
 
 
 const Test = ({cards}) => {
-    
+    console.log(cards)
     return ( 
         <Layout>
             <div className='home'>
@@ -38,12 +35,9 @@ const Test = ({cards}) => {
     )
 }
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:5000/cards')
-    const cards = await res.json()
+    console.log(cards)
     return{
-        props: {
-            cards,
-        },
-    }
+        props: cards,
+}
 }
 export default Test;
