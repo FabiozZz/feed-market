@@ -1,5 +1,13 @@
 import {cloneElement, useEffect, useState} from "react";
 
+/**
+ * @description Компонент GroupCheckbox
+ *
+ * @param {React.InputHTMLAttributes} props
+ * @returns {JSX.Element}
+ * @constructor
+ */
+
 const GroupCheckbox = ({children, onClick, ...other}) => {
 
     let [content, setContent] = useState(children);
