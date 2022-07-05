@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import classNames from "classnames";
+=======
+>>>>>>> master
 import {cloneElement, useEffect, useState} from "react";
 
 const GroupCheckbox = ({children, onClick, ...other}) => {
@@ -5,6 +9,37 @@ const GroupCheckbox = ({children, onClick, ...other}) => {
     let [content, setContent] = useState(children);
     let [checkboxes, setCheckboxes] = useState([]);
     useEffect(() => {
+<<<<<<< HEAD
+        let checkbox = [];
+        content?.forEach((item, index) => {
+            if (item?.type?.name === "Checkbox")
+                checkbox.push(index);
+        });
+        let buf = content?.map((item, index) => {
+            if (checkbox.includes(index)) {
+                if (index === 0) {
+                    return cloneElement(item, {...item.props, 'data-maingroup': true, key: index})
+                } else {
+                    return cloneElement(item, {...item.props, key: index})
+                }
+            } else {
+                return item
+            }
+        });
+        setContent(buf);
+        setCheckboxes(checkbox)
+    }, []);
+
+    const clearCheckBox = (groupChecked) => {
+        setContent('')
+        let a = content.map((item, index) => {
+            if (checkboxes.includes(index)) {
+                if (index !== checkboxes[0]) {
+                    console.log(item)
+                    return cloneElement(item, {...item.props, checked: false, groupChecked: groupChecked});
+                } else {
+                    return item;
+=======
         if (!Array.isArray(content) || content.filter(item => item?.type?.name === "Checkbox").length === 0) {
             throw new Error('Внутри необходимы checkbox\'ы')
         } else if (content.filter(item => item?.type?.name === "Checkbox").length === 1) {
@@ -19,10 +54,17 @@ const GroupCheckbox = ({children, onClick, ...other}) => {
                     return cloneElement(item, {...item.props, 'data-id': index, 'data-maingroup': true, key: index});
                 } else {
                     return cloneElement(item, {...item.props, 'data-id': index, key: index});
+>>>>>>> master
                 }
             } else {
                 return item
             }
+<<<<<<< HEAD
+        });
+        setContent(a);
+    };
+
+=======
         }));
         setCheckboxes(checkbox)
     }, []);
@@ -53,6 +95,7 @@ const GroupCheckbox = ({children, onClick, ...other}) => {
         });
     }
 
+>>>>>>> master
     const ClickHandler = (e) => {
         if (onClick) {
             onClick(e);
@@ -60,6 +103,17 @@ const GroupCheckbox = ({children, onClick, ...other}) => {
 
         let wrap = e.target.closest('label');
         if (wrap?.children[0].tagName === "INPUT") {
+<<<<<<< HEAD
+            let input = wrap.children[0]
+            if (input.dataset.maingroup === 'true') {
+                if (input.checked) {
+                    clearCheckBox(true);
+                } else {
+                    clearCheckBox(false);
+                }
+            } else {
+                clearCheckBox(false);
+=======
             let input = wrap.children[0];
             let array = changeCheck(input.dataset.id, input.checked);
             if (input.dataset.maingroup === 'true') {
@@ -70,6 +124,7 @@ const GroupCheckbox = ({children, onClick, ...other}) => {
                 }
             } else {
                 clearCheckBox(array,false, true);
+>>>>>>> master
             }
         }
     }
