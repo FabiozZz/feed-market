@@ -1,2 +1,20 @@
 .home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 128px;
+}
+
+.card{
+  &__row{
+    width: 100%;
+  }
+
+  &__block{
+    width: 100%;
+    &__wrapper{
+      display: flex;
+    }
+  }
 }
