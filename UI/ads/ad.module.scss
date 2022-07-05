@@ -1,0 +1,29 @@
+@import "/styles/variables";
+
+.ad__ {
+
+    &large {
+        min-width: 1464px;
+        min-height: 328px;
+        @extend %ad;
+    }
+
+    &medium {
+        min-width: 1092px;
+        min-height: 328px;
+        @extend %ad;
+    }
+
+    &small {
+        min-width: 1092px;
+        min-height: 272px;
+        @extend %ad;
+    }
+
+    &vertical {
+        min-width: 346px;
+        max-height: 960px;
+        @extend %ad;
+    }
+   
+}
